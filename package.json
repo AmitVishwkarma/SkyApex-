@@ -1,10 +1,13 @@
 {
-  "dependencies": {
-    "body-parser": "^2.2.0",
-    "ejs": "^3.1.10",
-    "express": "^5.1.0"
+  "name": "sale-deed-generator",
+  "version": "1.0.0",
+  "description": "Sale Deed Generator Application",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
   },
-  "devDependencies": {
-    "nodemon": "^3.1.10"
+  "dependencies": {
+    "express": "^4.18.2",
+    "puppeteer": "^21.3.8"
   }
 }
