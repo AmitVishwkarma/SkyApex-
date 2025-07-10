@@ -162,16 +162,30 @@
       </form>
 
       <!-- Hidden Template -->
-      <div id="template"  style="padding: 40px;">
-        <h2 style="text-align: left; color: red; display: flex; align-items: center; justify-content: center; ">Sale Deed</h2>
-        <p style="text-align: left; padding-left: 20%;">
-          This Sale Deed is made on  between  <br/>
-          Full name  : <strong>{{name}}</strong>, <br/>
-          Father name :  <strong>{{father_name}}</strong>, <br/>
-          Property Size :  <strong>{{property_size}}</strong> sq.ft., <br/>
-          Date of sale  : <strong>{{date}}</strong>, <br/>
-          Sale Amount :  ₹<strong>{{sale_amount}}</strong>.
-        </p>
+      <div id="template"  style="padding: 40px; height: 60%; width: 100%;">
+        <h2 style="text-align: left; color: red; display: flex; align-items: center; justify-content: center;">Sale Deed</h2>
+        <table style="margin-left: 20%; border-collapse: collapse; width: 60%; font-size: 1.1em;">
+          <tr>
+            <td style="padding: 8px; border: 1px solid #ccc;">Full Name</td>
+            <td style="padding: 8px; border: 1px solid #ccc;"><strong>{{name}}</strong></td>
+          </tr>
+          <tr>
+            <td style="padding: 8px; border: 1px solid #ccc;">Father's Name</td>
+            <td style="padding: 8px; border: 1px solid #ccc;"><strong>{{father_name}}</strong></td>
+          </tr>
+          <tr>
+            <td style="padding: 8px; border: 1px solid #ccc;">Property Size (sq.ft.)</td>
+            <td style="padding: 8px; border: 1px solid #ccc;"><strong>{{property_size}}</strong></td>
+          </tr>
+          <tr>
+            <td style="padding: 8px; border: 1px solid #ccc;">Date of Sale</td>
+            <td style="padding: 8px; border: 1px solid #ccc;"><strong>{{date}}</strong></td>
+          </tr>
+          <tr>
+            <td style="padding: 8px; border: 1px solid #ccc;">Sale Amount (₹)</td>
+            <td style="padding: 8px; border: 1px solid #ccc;"><strong>{{sale_amount}}</strong></td>
+          </tr>
+        </table>
       </div>
 
       <script>
@@ -201,7 +215,7 @@
 
             // Create a temporary element for PDF generation
             const pdfElement = document.createElement('div');
-            pdfElement.style.padding = '40px';
+            pdfElement.style.padding = '4px';
             pdfElement.innerHTML = updatedContent;
 
             // Generate PDF
